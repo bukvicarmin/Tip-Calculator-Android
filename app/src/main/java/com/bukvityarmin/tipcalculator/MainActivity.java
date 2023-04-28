@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,17 +38,28 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                double amount = Double.parseDouble(AmountText.getText().toString());
-                double tipPercentage = getTipPercentage();
-                int GuestNo = Integer.parseInt(GuestText.getText().toString());
+                String AmountTextCheck = AmountText.getText().toString().trim();
+                String GuestTextCheck = GuestText.getText().toString().trim();
 
-                double tip = (amount * tipPercentage) / 100;
-                double fullAmount = amount + tip;
-                double GuestAmount = fullAmount / GuestNo;
+                if (AmountTextCheck.isEmpty() || GuestTextCheck.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Adjon meg számot", Toast.LENGTH_SHORT).show();
 
-                FullAmountText.setText("A teljes összeg: " + Math.round(fullAmount));
-                TipAmountText.setText("A borravaló mértéke: " + Math.round(tip));
-                AmountPerGuest.setText("Fejenkénti összeg: " + Math.round(GuestAmount));
+                } else {
+
+                    double amount = Double.parseDouble(AmountText.getText().toString());
+                    double tipPercentage = getTipPercentage();
+                    int GuestNo = Integer.parseInt(GuestText.getText().toString());
+
+                    double tip = (amount * tipPercentage) / 100;
+                    double fullAmount = amount + tip;
+                    double GuestAmount = fullAmount / GuestNo;
+
+
+                    FullAmountText.setText("A teljes összeg: " + Math.round(fullAmount));
+                    TipAmountText.setText("A borravaló mértéke: " + Math.round(tip));
+                    AmountPerGuest.setText("Fejenkénti összeg: " + Math.round(GuestAmount));
+
+                }
             }
         });
     }

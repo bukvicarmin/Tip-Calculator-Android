@@ -12,30 +12,19 @@
         android:id="@+id/CalculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Fejenkénti összeg számítása"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/GuestText" />
 
-    <TextView
-        android:id="@+id/TipAmountText"
-        android:layout_width="264dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="8dp"
-        android:text=""
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/FullAmountText" />
-
     <RadioGroup
         android:id="@+id/RadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:orientation="horizontal"
+        android:checkedButton="@+id/radioButton10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AmountText">
@@ -66,22 +55,10 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/AmountPerGuest"
-        android:layout_width="266dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TipAmountText" />
-
-    <TextView
         android:id="@+id/FullAmountText"
         android:layout_width="264dp"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +70,7 @@
         android:id="@+id/GuestText"
         android:layout_width="294dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Vendégek száma"
         android:inputType="number"
@@ -102,23 +79,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RadioGroup" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:text="Borravaló kalkulátor"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/AmountText"
         android:layout_width="252dp"
         android:layout_height="48dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:hint="Fizetendő összeg"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,10 +96,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="Borravaló mértéke százalékban"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AmountText" />
+
+    <TextView
+        android:id="@+id/AmountPerGuest"
+        android:layout_width="266dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TipAmountText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Borravaló kalkulátor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TipAmountText"
+        android:layout_width="264dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FullAmountText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
